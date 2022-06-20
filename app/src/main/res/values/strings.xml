@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AppLicht</string>
+    <string name="App_Name">LichtApp Lamp Manager</string>
+    <string name="Login_UserHint">Escriba su Correo</string>
+    <string name="Login_PassHint">Escriba su Contraseña</string>
+    <string name="Button_Login">Login</string>
+    <string name="Button_SingUp">SingUp</string>
+    <string name="Form_Name">Escriba su Nombre</string>
+    <string name="Form_Document">Escriba su Documento</string>
+    <string name="Form_Email">Escriba su Correo</string>
+    <string name="Form_Url">Escriba su URL</string>
+    <string name="Form_Pass">Escriba su Contraseña</string>
+    <string name="Button_Form">Registrar</string>
+    <string name="Txt_Add_Product">Agregar producto</string>
+    <string name="Button_Edit">Editar</string>
+    <string name="Button_return">Volver</string>
+    <string name="mi_logout">Salir</string>
+    <string name="Return">Volver</string>
+</resources>
