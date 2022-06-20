@@ -13,85 +13,86 @@
             name="title"
             type="String"/>
     </data>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
 
-    <ImageView
-        android:id="@+id/Login_im_image"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background"
-        />
+        android:layout_height="match_parent"
+        tools:context=".view.MainActivity">
 
-    <TextView
-        android:id="@+id/Login_tv_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="@string/App_Name"
-        android:textColor="@color/purple_700"
-        android:textSize="24sp"
-        android:layout_marginVertical="14dp"
-        android:layout_marginHorizontal="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Login_im_image" />
+        <ImageView
+            android:id="@+id/Login_im_image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background"
+            />
 
-    <EditText
-        android:id="@+id/Login_et_user"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/Login_UserHint"
-        android:text="@={view_model.user.email}"
-        android:layout_marginTop="32dp"
-        android:layout_marginHorizontal="32dp"
-        android:inputType="textEmailAddress"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Login_tv_title" />
+        <TextView
+            android:id="@+id/Login_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/App_Name"
+            android:textColor="@color/purple_700"
+            android:textSize="24sp"
+            android:layout_marginVertical="14dp"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Login_im_image" />
 
-    <EditText
-        android:id="@+id/Login_et_pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/Login_PassHint"
-        android:text="@={view_model.password}"
-        android:layout_marginTop="32dp"
-        android:layout_marginHorizontal="32dp"
-        android:inputType="textPassword"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Login_et_user" />
+        <EditText
+            android:id="@+id/Login_et_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Login_UserHint"
+            android:text="@={view_model.user.email}"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="32dp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Login_tv_title" />
 
-    <Button
-        android:id="@+id/Login_bt_login"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/Button_Login"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/Login_et_pass"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/Login_bt_singup"/>
+        <EditText
+            android:id="@+id/Login_et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Login_PassHint"
+            android:text="@={view_model.password}"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="32dp"
+            android:inputType="textPassword"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Login_et_user" />
 
-    <Button
-        android:id="@+id/Login_bt_singup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/Button_SingUp"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/Login_et_pass"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/Login_bt_login"/>
+        <Button
+            android:id="@+id/Login_bt_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Button_Login"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/Login_et_pass"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/Login_bt_singup"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/Login_bt_singup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Button_SingUp"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/Login_et_pass"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/Login_bt_login"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

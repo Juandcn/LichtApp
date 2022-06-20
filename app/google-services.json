@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "2883254509",
+    "project_id": "applicht-924a6",
+    "storage_bucket": "applicht-924a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2883254509:android:fc43ed3f3266c737ca34e4",
+        "android_client_info": {
+          "package_name": "co.edu.unab.mgads.jdcn.applicht"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2883254509-vc55ot8be738qhtjbujh7r0gmthvme62.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.unab.mgads.jdcn.applicht",
+            "certificate_hash": "d40f6d000a2a508f0198246d479710891b4f957b"
+          }
+        },
+        {
+          "client_id": "2883254509-k60on4gl2vammeitntvtfi17ajc14gjg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo56k-h5uE28x604qX5p6kzFWL1UqUzl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2883254509-k60on4gl2vammeitntvtfi17ajc14gjg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

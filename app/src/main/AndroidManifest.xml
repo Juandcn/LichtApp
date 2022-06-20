@@ -4,6 +4,7 @@
     package="co.edu.unab.mgads.jdcn.applicht">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature android:name="android.hardware.camera2" />
 
     <application
@@ -16,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppLicht"
         tools:targetApi="31">
+        <activity
+            android:name=".view.FormLampActivity"
+            android:exported="false" />
         <activity
             android:name=".view.DetailLampActivity"
             android:exported="false" />
@@ -30,21 +34,20 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <provider
+            android:name="androidx.core.content.FileProvider"
             android:authorities="co.edu.unab.mgads.jdcn.applicht.fileprovider"
             android:exported="false"
-            android:grantUriPermissions="true"
-            android:name="androidx.core.content.FileProvider">
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"
-                />
+                android:resource="@xml/file_paths" />
         </provider>
-
     </application>
 
 </manifest>

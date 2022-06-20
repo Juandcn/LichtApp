@@ -8,12 +8,12 @@
     <string name="Form_Name">Escriba su Nombre</string>
     <string name="Form_Document">Escriba su Documento</string>
     <string name="Form_Email">Escriba su Correo</string>
+    <string name="Form_GPS">Escriba su Ubicacion</string>
     <string name="Form_Url">Escriba su URL</string>
     <string name="Form_Pass">Escriba su Contraseña</string>
     <string name="Button_Form">Registrar</string>
-    <string name="Txt_Add_Product">Agregar producto</string>
+    <string name="Add_Lamp">Agregar Lampara</string>
     <string name="Button_Edit">Editar</string>
     <string name="Button_return">Volver</string>
-    <string name="mi_logout">Salir</string>
-    <string name="Return">Volver</string>
+    <string name="Button_Exit">Salir</string>
 </resources>

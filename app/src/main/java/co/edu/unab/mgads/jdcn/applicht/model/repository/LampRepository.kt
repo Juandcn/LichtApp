@@ -20,7 +20,8 @@ class LampRepository  (myContext: Context) {
 
     private val PRODUCT_COLLECTION:String="products"
 
-    var Lamps: MutableLiveData<List<Lamp>> = MutableLiveData()
+    var lamps: MutableLiveData<List<Lamp>> = MutableLiveData()
+    var lamp: MutableLiveData<Lamp> = MutableLiveData()
 
     private val firestore: FirebaseFirestore = Firebase.firestore
     private val api: Retrofit =LichtAppAPI.getInstance()!!
@@ -41,7 +42,7 @@ class LampRepository  (myContext: Context) {
                     }
                 }
             }
-            Lamps.value=productsList
+            lamps.value=productsList
         }
     }
 
@@ -58,17 +59,17 @@ class LampRepository  (myContext: Context) {
                         }
                     }
                 }
-                Lamps.value=productsList
+                lamps.value=productsList
             }
         }
     }
 
     fun getByIdFirestore(id:String){
         firestore.collection(PRODUCT_COLLECTION).document(id).get().addOnSuccessListener { result ->
-            val myProduct:Lamp?=result.toObject(Lamp::class.java)
-            myProduct?.let {
+            val myLamp:Lamp?=result.toObject(Lamp::class.java)
+            myLamp?.let {
                 it.id=id
-                Lamps.value= listOf(it)
+                lamp.value= it
             }
         }
     }
@@ -100,9 +101,9 @@ class LampRepository  (myContext: Context) {
         return productIdObserver
     }
 
-    fun updateFirestore(myProduct: Lamp): LiveData<Boolean> {
+    fun updateFirestore(myLamp: Lamp): LiveData<Boolean> {
         val stateUpdateObserver: MutableLiveData<Boolean> = MutableLiveData()
-        firestore.collection(PRODUCT_COLLECTION).document(myProduct.id).set(myProduct).addOnSuccessListener {
+        firestore.collection(PRODUCT_COLLECTION).document(myLamp.id).set(myLamp).addOnSuccessListener {
             stateUpdateObserver.value=true
         }.addOnFailureListener{
             stateUpdateObserver.value=false
@@ -110,9 +111,9 @@ class LampRepository  (myContext: Context) {
         return stateUpdateObserver
     }
 
-    fun deleteFirestore(myProduct: Lamp): LiveData<Boolean> {
+    fun deleteFirestore(myLamp: Lamp): LiveData<Boolean> {
         val stateDeleteObserver: MutableLiveData<Boolean> = MutableLiveData()
-        firestore.collection(PRODUCT_COLLECTION).document(myProduct.id).delete().addOnSuccessListener {
+        firestore.collection(PRODUCT_COLLECTION).document(myLamp.id).delete().addOnSuccessListener {
             loadAllFirestore()
             stateDeleteObserver.value=true
         }.addOnFailureListener{
