@@ -7,7 +7,7 @@ import co.edu.unab.mgads.jdcn.applicht.model.repository.UserRepository
 
 class SingUpActivityViewModel : ViewModel(){
     var user: User = User("","","","")
-    var password:String=""
+    var password:String="12345"
     private val userRepository = UserRepository()
 
     fun singUp(): LiveData<User?> {
